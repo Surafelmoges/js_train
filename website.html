@@ -19,7 +19,7 @@
   </button>
 
   <button onclick="
-  cartQuan = cartQuan + 2;""2
+  cartQuan = cartQuan + 2;
   console.log(`Cart quantitiy: ${cartQuan}`);
   ">
     +2
@@ -44,6 +44,18 @@
     +5
   </button>
   <button onclick="
+  cartQuan-=2;
+  console.log(`Cart quantitiy: ${cartQuan}`);
+  ">
+   -2
+  </button>
+  <button onclick="
+  cartQuan-=3;
+  console.log(`Cart quantitiy: ${cartQuan}`);
+  ">
+   -3
+  </button>
+  <button onclick="
   cartQuan = 0;
   console.log('Cart was reset.');
   console.log(`Cart quantitiy: ${cartQuan}`);
@@ -51,6 +63,12 @@
   ">
     Reset Cart
   </button>
+   <button onclick="
+   cartQuan = cartQuan - 1;
+   console.log(`Cart quantitiy: ${cartQuan}`);
+   ">
+    Remove from cart
+   </button>
   <script>
     let cartQuan = 0;
   </script>
