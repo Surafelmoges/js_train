@@ -8,78 +8,65 @@
   <h3>Calculator</h3>
   <p>
   <button onclick="
-   calculation +='1';
-    console.log(calculation);
+     Calculator('1');
     ">
     1
   </button>
   <button onclick="
-  calculation +='2';
-  console.log(calculation);
+    Calculator('2');
   ">
     2
   </button>
   <button onclick="
-   calculation +='3';
-   console.log(calculation);
+   Calculator('3');
   ">
     3
   </button>
   <button onclick="
-  calculation +=' + ';
-  console.log(calculation);
+  Calculator('+');
   ">
     +
   </button>
 </p>
 <p>
   <button onclick="
-    calculation += '4';
-    console.log(calculation);
+    Calculator('4');
   ">4</button>
 
   <button onclick="
-    calculation += '5';
-    console.log(calculation);
+    Calculator('5');
   ">5</button>
 
   <button onclick="
-    calculation += '6';
-    console.log(calculation);
+    Calculator('6');
   ">6</button>
 
   <button onclick="
-    calculation += ' - ';
-    console.log(calculation);
+   Calculator('-');
   ">-</button>
 </p>
 
 <p>
   <button onclick="
-    calculation += '7';
-    console.log(calculation);
+    Calculator('7');
   ">7</button>
 
   <button onclick="
-    calculation += '8';
-    console.log(calculation);
+    Calculator('8');
   ">8</button>
 
   <button onclick="
-    calculation += '9';
-    console.log(calculation);
+   Calculator('9');
   ">9</button>
 
   <button onclick="
-    calculation += ' * ';
-    console.log(calculation);
+    Calculator('*');
   ">*</button>
 </p>
 
 <p>
   <button onclick="
-    calculation += '0';
-    console.log(calculation);
+   Calculator('0');
   ">0</button>
 
   <button onclick="
@@ -109,8 +96,14 @@
 
 
   <script>
-  let calculation = '';
+  let calculation = localStorage.getItem('calculation') || '';
 
+  function Calculator(value){
+    calculation += value;
+    console.log(calculation);
+    localStorage.setItem('calculation',calculation);
+
+  }
   </script>
 </body>
 </html>
